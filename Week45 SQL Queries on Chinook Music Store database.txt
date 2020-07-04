@@ -1,0 +1,73 @@
+/* 1. Which city has the best customers? */
+
+/* this selects the city with the highest sum of invoice totals */
+
+SELECT BillingCity, MAX(Total)					 
+FROM invoice; 
+
+
+
+/* 2. Which countries have the most Invoices? */
+
+/* counts the no of invoices per country */
+
+SELECT BillingCountry, COUNT(Total)															
+FROM invoice
+GROUP BY BillingCountry					
+ORDER BY 2 DESC									/* sorts the table by the COUNT(Total) in descending order */
+LIMIT 1;    									/* LIMIT 1 makes sure the result is limited to one entry */
+
+
+
+
+/* 3. Who is the best customer? */
+
+/* This is the highest spending customer, with the highest total no of invoices */
+
+
+SELECT FirstName, LastName, SUM(Total)
+FROM invoice
+JOIN customer		 				/* we join the customer table so we can extract the customer details corresponding to InvoiceId */
+ON invoice.CustomerId=customer.CustomerId
+GROUP BY 2
+ORDER BY 3 DESC						/* sorts the result in descending order of Sum Total */ 
+LIMIT 1;						/* limits the result to one output */
+
+
+
+
+/* 4. Customers who listen to rock music */
+
+/* this returns the contact details of customers who listen to rock music */
+
+
+SELECT DISTINCT FirstName, LastName, Email, Genre.Name
+FROM Customer
+JOIN Invoice ON Customer.CustomerId=Invoice.CustomerId 		/* merge invoice table and customer table to get InvoiceId corresponding to CustomerId */
+JOIN InvoiceLine ON InvoiceLine.InvoiceId=Invoice.InvoiceId	/* join InvoiceLine table to get InvoiceLineId corresponding to InvoiceId */
+JOIN Track ON Track.TrackId=InvoiceLine.TrackId			/* to get the TrackId of corresponding purchases */
+JOIN Genre ON Track.GenreId=Genre.GenreId			/* we can now use genre table to get the category of genre purchased by each customer
+WHERE Genre.Name='Rock'						/* selects only the rows with 'Rock' genre type */
+ORDER BY 3;							/* sorts the results in ascending order of email, that is 3rd column is arranged alphabetically*/
+
+
+
+
+
+/* 5. Most popular music genre for each country */ 
+
+/* this returns the genre with the highest no of purchases for each country */
+
+
+SELECT BillingCountry, Genre, MAX(Sum_Unitprice) AS MostPopular FROM
+/* here, I used a subquery since I cannot use two aggregate function(MAX & SUM) together */
+/* A subquery returns data that will be used in the main query
+ as a condition to further restrict the data to be retrieved. */
+(SELECT BillingCountry, SUM(InvoiceLine.UnitPrice) AS Sum_Unitprice, Genre.Name AS Genre
+FROM Customer
+JOIN Invoice ON Customer.CustomerId=Invoice.CustomerId						/* getting the InvoiceId */
+JOIN InvoiceLine ON InvoiceLine.InvoiceId=Invoice.InvoiceId					/* using InvoiceId to get InvoiceLineId */
+JOIN Track ON Track.TrackId=InvoiceLine.TrackId							/* getting the TrackId corresponding to InvoiceLineId */
+JOIN Genre ON Track.GenreId=Genre.GenreId							/* using TrackId to get genre name */
+GROUP BY 1, 3)
+GROUP BY 1;
