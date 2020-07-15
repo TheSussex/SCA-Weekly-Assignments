@@ -12,4 +12,4 @@ Week 4: I wrote a medium article to summary what I've learnt in the first month 
 Week 5: This week I learnt basic SQL, SQL joins, SQL Aggregations and some advanced SQL queries. I completed a SQL course on LinkedIn Learning, got a certificate and ran SQL queries on the Chinook database I worked on in week 3. 
 
 Week 6: This week is quite interesting. I learnt about Tableau for the first time and it's very fascinating seeing the amount of information I can access with the right data. I created visualizations using the Super Store dataset. Check it out here 
-https://public.tableau.com/profile/success.ologunsua#!/vizhome/EfecctofDiscountonProfit/Whichoftheshipmodesisusedtomakethehighestsales?publish=yes
+https://public.tableau.com/profile/success.ologunsua#!/vizhome/EfecctofDiscountonProfit/Howmuchsalesdowehaveovertheyearsbymonth
