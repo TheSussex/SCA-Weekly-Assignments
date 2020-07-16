@@ -13,3 +13,5 @@ Week 5: This week I learnt basic SQL, SQL joins, SQL Aggregations and some advan
 
 Week 6: This week is quite interesting. I learnt about Tableau for the first time and it's very fascinating seeing the amount of information I can access with the right data. I created visualizations using the Super Store dataset. Check it out here 
 https://public.tableau.com/profile/success.ologunsua#!/vizhome/EfecctofDiscountonProfit/Howmuchsalesdowehaveovertheyearsbymonth
+
+Week 7- I learnt another data visualization tool, Power BI, it's as cool as Tableau. I then visualized the Super Store Data I worked on last week using Power BI.
