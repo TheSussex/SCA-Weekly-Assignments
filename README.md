@@ -14,4 +14,7 @@ Week 5: This week I learnt basic SQL, SQL joins, SQL Aggregations and some advan
 Week 6: This week is quite interesting. I learnt about Tableau for the first time and it's very fascinating seeing the amount of information I can access with the right data. I created visualizations using the Super Store dataset. Check it out here 
 https://public.tableau.com/profile/success.ologunsua#!/vizhome/EfecctofDiscountonProfit/Howmuchsalesdowehaveovertheyearsbymonth
 
-Week 7- I learnt another data visualization tool, Power BI, it's as cool as Tableau. I then visualized the Super Store Data I worked on last week using Power BI.
+Week 7: I learnt another data visualization tool, Power BI, it's as cool as Tableau. I then visualized the Super Store Data I worked on last week using Power BI.
+
+Week 8: I combined everything I've learnt in the past two months to carry out an exploratory analysis of a dataset. I chose the Malaria dataset because of my interest in health and how insights can be gained with the appropriate data. I used Power BI to create insightful visuals. I also wrote a non-technical post on the analysis.
+Read it here: https://medium.com/@TheSussex/malaria-are-you-safe-4a69dd058fa6
