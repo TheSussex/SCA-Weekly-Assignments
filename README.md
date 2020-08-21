@@ -18,3 +18,7 @@ Week 7: I learnt another data visualization tool, Power BI, it's as cool as Tabl
 
 Week 8: I combined everything I've learnt in the past two months to carry out an exploratory analysis of a dataset. I chose the Malaria dataset because of my interest in health and how insights can be gained with the appropriate data. I used Power BI to create insightful visuals. I also wrote a non-technical post on the analysis.
 Read it here: https://medium.com/@TheSussex/malaria-are-you-safe-4a69dd058fa6
+
+Week 9-12: For the last month of the program, I learnt about machine learning and built a linear regression model using the World Happiness Report. I wrote a technical article on the project. Read about my capstone project here: https://medium.com/@TheSussex/is-happiness-free-bb9ef70d0bd5
+
+The program has been challenging and rewarding at the same time. I'm glad I got to be a part of it. 
